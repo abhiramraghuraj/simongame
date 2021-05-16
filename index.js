@@ -93,7 +93,7 @@ const panelclicked = panel => {
 
 const main = async () => {
     var start = new Audio("startaud.mp3");
-    start.play();\
+    start.play();
     var vanish = document.querySelector('h3');
     vanish.style.display = 'none';
     setTimeout(() => {
