@@ -17,9 +17,10 @@ const getrandpanel = () => {
 // var blue = document.querySelector('#blue').addEventListener('click', sound);
 // var green = document.querySelector('#green').addEventListener('click', sound);
 // var yellow = document.querySelector('#yellow').addEventListener('click', sound);
-
+var audio = false;
 function sound(e){
     //alert(e.target.id);
+  if(audio){
     switch(e.target.id){
         case 'red':
             var sound1 = new Audio("redaud.mp3");
@@ -38,6 +39,7 @@ function sound(e){
             sound4.play();
             break;         
         }
+  }
 };
 
 
@@ -63,6 +65,7 @@ let canclick = false;
 const panelclicked = panel => {
     if (!canclick) return;
     //console.log(panel);
+    audio = true;
     const expectedpanel = seqtoguess.shift();
     console.log(expectedpanel);
     console.log(panelclicked);
@@ -80,6 +83,7 @@ const panelclicked = panel => {
     }
 };
  const startflash = async () =>{
+    audio = false;
     var red = document.querySelector('#red').addEventListener('click', sound);
     var blue = document.querySelector('#blue').addEventListener('click', sound);
     var green = document.querySelector('#green').addEventListener('click', sound);
