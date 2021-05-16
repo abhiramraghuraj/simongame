@@ -71,7 +71,7 @@ const panelclicked = panel => {
             //start new round
             sequence.push(getrandpanel());
             seqtoguess = [...sequence];
-            setTimeout(() =>{startflash()}, 250);
+            setTimeout(() =>{startflash()}, 1000);
         }
     } else {
         //end game
@@ -93,7 +93,9 @@ const panelclicked = panel => {
 
 const main = async () => {
     var start = new Audio("startaud.mp3");
-    start.play();
+    start.play();\
+    var vanish = document.querySelector('h3');
+    vanish.style.display = 'none';
     setTimeout(() => {
         startflash()},1000)
 };
