@@ -5,27 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIMON GAME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>SIMON GAME</h1>
-        <h3>CLICK <button id="start">HERE</button> TO START</h3>      
-    </header>
-
-    <div class="gamepanel ">
-        <div>
-            <div onclick="panelclicked(event.currentTarget)" class="gameboard top-left-red" id="red"></div>
-            <div onclick="panelclicked(event.currentTarget)" class="gameboard top-right-qc" id="green"></div>
-        </div>
-        <div>
-            <div onclick="panelclicked(event.currentTarget)" class="gameboard bottom-left-qc" id="yellow"></div>
-            <div onclick="panelclicked(event.currentTarget)" class="gameboard bottom-right-qc" id="blue"></div>
-        </div>
-        <div class="center"></div>
-        <div onClick=  'document.location.reload(true)' id="new-game"><button>NEW GAME</button></div>
+    <div class="smallscreen"><i style="color:white;font-size: 30px;margin-top: 6px;margin-right: 35px;" class="fa fa-info-circle"></i>
     </div>
     
+    <section class="look">
+        <header>
+            <h1>SIMON GAME</h1>
+            <h3>CLICK <button id="start">HERE</button> TO START</h3> 
+            <span class="icon">
+                    <i class=' fa fa-info-circle' style="color: red;"></i>
+                </span>
+                <div class="instructions">
+                    <p>
+                        Here's something to help you understand how it works.
+                        As soon as you here the "start" sound, A panel from the board glows randomly.
+                        Click the same panel to move further, and the count of glowing panels increases each time you've completed the sequence.
+                        We help you with a sound to notify which colour you clicked, but remembering the computer generated sequence(comes without any sound) is purely dependent on your observation.
+                        ALL THE BEST!!
+                    </p>
+                </div> 
+        </header>
+
+        
+        <div class="gamepanel ">
+            <div>
+                <div onclick="panelclicked(event.currentTarget)" class="gameboard top-left-red" id="red"></div>
+                <div onclick="panelclicked(event.currentTarget)" class="gameboard top-right-qc" id="green"></div>
+            </div>
+            <div>
+                <div onclick="panelclicked(event.currentTarget)" class="gameboard bottom-left-qc" id="yellow"></div>
+                <div onclick="panelclicked(event.currentTarget)" class="gameboard bottom-right-qc" id="blue"></div>
+            </div>
+            <div class="center"></div>
+            <div onClick=  'document.location.reload(true)' id="new-game"><button>NEW GAME</button></div>
+        </div>
+        
+    </section>
+    <div class="instruction">
+        <p>
+            Here's something to help you understand how it works.
+            As soon as you here the "start" sound, A panel from the board glows randomly.
+            Click the same panel to move further, and the count of glowing panels increases each time you've completed the sequence.
+            We help you with a sound to notify which colour you clicked, but remembering the computer generated sequence(comes without any sound) is purely dependent on your observation.
+            ALL THE BEST!!
+        </p>
+    </div>    
     <script src="index.js"></script>
 </body>
 </html>
