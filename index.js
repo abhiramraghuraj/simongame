@@ -2,6 +2,7 @@
   var bottomleft = document.querySelector('.bottom-left-qc');
   var topright = document.querySelector('.top-right-qc');
   var bottomright = document.querySelector('.bottom-right-qc');
+  var gamepanel = document.querySelector('.gamepanel');
 
 const getrandpanel = () => {
     const panels = [
@@ -101,7 +102,7 @@ const main = async () => {
     var vanish = document.querySelector('h3');
     vanish.style.display = 'none';
     setTimeout(() => {
-        startflash()},1000)
+        startflash()},1500)
 };
 
  // main();
@@ -159,4 +160,21 @@ const main = async () => {
 //         };
 //       }
 //  };
+var menu = document.querySelector('.smallscreen').addEventListener('click',optionsfunc);
+function optionsfunc(){
+    console.log("123");
+    var vanish1 = document.querySelector('.look');
+    var x = document.querySelector('.instruction');
+    //var show = document.querySelector('#list');
+    if(x.className === 'instruction'){
+        var vanish1 = document.querySelector('.look');
+        vanish1.style.display = 'none';
+        x.className += ' active';
+    }
+    else{
+        vanish1.style.display = '';
+        x.className = 'instruction';
+    }
+
+}
         
