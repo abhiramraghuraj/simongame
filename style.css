@@ -13,6 +13,7 @@ body{
     display: none;
     position: absolute;
     right: 0;
+    opacity:0.7;
 }
 
 
@@ -225,4 +226,12 @@ h3{
         display: none;
     }
 
+}
+@media(max-width:400px){
+    h1{
+        font-size: 20px;
+    }
+    .smallscreen{
+        font-size: 10px;
+    }
 }
