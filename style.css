@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-body{
+.look{
     text-align: center;
     /* background-color: rgb(26, 24, 24); */
-    background-color: #000000;
+    
 
+}
+body{
+    background-color: #000000;
+}
+.smallscreen{
+    display: none;
+    position: absolute;
+    right: 0;
 }
 
 
@@ -17,11 +25,61 @@ h3{
     font-family: 'Quicksand', sans-serif;
     color: rgb(160, 156, 156);
 }
+    .instructions{
+        display: none;
+        text-align: center;
+    }
+
+.icon{
+    position: relative;
+    display: inline;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.icon:hover + .instructions{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    color: black;
+    background-color: rgb(110, 107, 107);
+    border: double;
+    border-width: 10px;
+    border-color: black ;
+    border-radius: 17px;
+    padding:0 20px 0 20px;
+    overflow: hidden;
+      
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.instruction.active{
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    color: black;
+    background-color: rgb(110, 107, 107);
+    border: double;
+    border-width: 10px;
+    border-color: black ;
+    border-radius: 17px;
+    padding:0 20px 0 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-right: 10px;
+
+}
 .gamepanel{
+    position:relative;
     padding-top: 20px;
     width: 100%;
     height: 400px;
-    margin-top: 50px;
+    margin-top: 0px;
+    
     box-shadow: 0 0 50px 10px rgb(39, 36, 36);
 
 }
@@ -126,7 +184,7 @@ h3{
 
 .center{
     text-align: center;
-    z-index: 1000;
+    
     position: relative;
     display: inline-block;
     /* background-color:rgb(26, 24, 24); */
@@ -152,4 +210,13 @@ h3{
     }
 
    
+}
+@media(max-width:1140px){
+    .smallscreen{
+        display: block;
+    }
+    .icon{
+        display: none;
+    }
+
 }
